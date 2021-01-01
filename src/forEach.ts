@@ -1,8 +1,8 @@
 type callbackType = (v:number) => number
 type itemType = number[]
-type forEachType = (items: itemType, callback: callbackType ) => number[]
+type forEachType = ( items: itemType, callback: callbackType ) => number[]
 
-const forEach: forEachType = ((items: itemType, callback: callbackType) => {
+const forEach: forEachType = ( (items: itemType, callback: callbackType ): itemType => {
     const array: number[] = []
     for (let index = 0; index < items.length; index++) {
         array.push(callback(items[index]))

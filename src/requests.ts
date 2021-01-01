@@ -1,7 +1,8 @@
 const axios = require('axios')
 
-const get = (url) => {
-    axios.get(url)
+class Users {
+    static all() {
+        return axios.get('https://api.github.com/zen')
         .then(function (response) {
             return response.data
         })
@@ -9,7 +10,7 @@ const get = (url) => {
             // console.log(error);
             return error
         })
+    }
 }
 
-const response = get('https://api.github.com/zen')
-console.log(response)
+export default Users;

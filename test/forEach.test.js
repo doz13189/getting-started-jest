@@ -1,10 +1,5 @@
 const forEach = require('../src/forEach.ts')
 
-// const mockCallback = jest.fn(x => { 
-//     console.log('x * 10', x * 10)
-//     return x * 10
-
-// })
 const mockCallback = jest.fn(x => x * 10);
 forEach([1, 2, 3], mockCallback)
 
